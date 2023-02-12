@@ -20,7 +20,7 @@ const Characters = () => {
         // TODO: something fishy going on here need to look into it handle 404 response "await timeout()"
         if (data.error) {
             setFlag(false);
-            console.log(flag);
+            // console.log(flag);
             return;
         }
         setCharacters(data.results);
@@ -42,9 +42,7 @@ const Characters = () => {
     // renders whatever in there
     return (
         <div className="app">
-            <button>
-                <Link to="/" className="btn">Back Home</Link>
-            </button>
+            <Link to="/" className="btn"><button>Back Home</button></Link>
             {/* search bar */}
             <div className="search">
                 <input
@@ -65,7 +63,9 @@ const Characters = () => {
             {flag === true ? (
                 <div className="container">
                     {characters.map((cast) => (
-                        <CharacterCard character={cast} />))
+                        <Link to={`/characters/${cast.id}`}>
+                            <CharacterCard character={cast} />
+                        </Link>))
                     }
                 </div>
             ) : (

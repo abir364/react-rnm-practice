@@ -10,7 +10,7 @@ const CardCarousel = ({ characters }) => {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 5.5,
         slidesToScroll: 1,
         initialSlide: 0,
         responsive: [

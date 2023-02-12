@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Characters from "./Characters";
 import './App.css';
+import SharedLayout from "./SharedLayout";
+import Character from "./Character";
 
 
 const App = () => {
@@ -15,8 +17,11 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element= {<Home />} />
-                <Route path="/Characters" element= {<Characters />} />
+                <Route path="/" element= {<SharedLayout />}>
+                    <Route index element={<Home />} />
+                    <Route path="/Characters" element= {<Characters />} />
+                    <Route path="/Characters/:characterId" element= {<Character />} />
+                </Route>
             </Routes>
         </BrowserRouter>
 

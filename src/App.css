@@ -25,9 +25,10 @@ body {
     font-family: TTT-light;
 }
 
-h1 {
+.shared h1 {
     font-size: 128px;
     letter-spacing: 0.9px;
+    text-align: center;
 }
 
 .app {
@@ -70,10 +71,8 @@ h1 {
     border-width: 1px;
     border-image: linear-gradient(135deg, #9def00, #14D9E5) 1;
     padding: 20px;
-    border-radius: 1em;
-    border-bottom-right-radius: 0;
-    border-left: 100;
-    border-bottom: 80%;
+    /* border-radius: 1em;
+    border-bottom-right-radius: 0; */
     font-family: TTT;
     clip-path: polygon(100% 0, 100% 80%, 82.5% 100%, 0 100%, 0 0);
 }
@@ -476,7 +475,7 @@ h1 {
 }
 
 .slick-next {
-    right: -5px;
+    right: -35px;
 }
 
 .empty {
@@ -484,3 +483,7 @@ h1 {
     color: #14D9E5;
 }
 
+a:-webkit-any-link {
+    text-decoration: none;
+    color: inherit;
+}

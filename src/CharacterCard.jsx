@@ -2,6 +2,7 @@ import React from "react";
 
 
 const CharacterCard = ({ character }) => {
+
     return (
         <div className="character">
             <div>
@@ -11,8 +12,7 @@ const CharacterCard = ({ character }) => {
                             ? character.image
                             : "https://via.placeholder.com/300/000000/FFFFFF/?text=rNm-page"
                     }
-                    alt={character.name}
-                />
+                    alt={character.name}/>
             </div>
             <div className="char-text">
                 <span>{character.name}</span>

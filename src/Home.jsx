@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import CardCarousel from "./CardCarousel";
+import Episodes from "./Episodes";
 import './App.css';
 
 const API_URL = "https://rickandmortyapi.com/api";
@@ -17,6 +18,7 @@ const Home = () => {
         const data = await response.json();
 
         setCharacters(data.results);
+
     };
 
     // run on page load
@@ -27,12 +29,13 @@ const Home = () => {
     // renders whatever in there
     return (
         <div className="app">
-            <h1>rNm</h1>
-            <button>
-                <Link to="/characters" className="btn">View All</Link>
-            </button>
-            <div class="carousel">
+            
+            <Link to="/characters" className="btn"><button> View All</button></Link>
+            <div className="carousel">
                 <CardCarousel characters={characters} />
+            </div>
+            <div className="episodes">
+                <Episodes />
             </div>
         </div>
 
